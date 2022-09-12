@@ -21,11 +21,11 @@ conda create -n pixivai python=3.9
 conda activate pixivai
 ```
 
-安装pytorch
+安装pytorch（3090、A5000、A100等显卡）
 ```bash
-conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch-lts -c conda-forge
+pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
 # 没有N卡的用这个
-conda install pytorch torchvision torchaudio cpuonly -c pytorch-lts
+pip install pytorch torchvision torchaudio cpuonly -c pytorch-lts
 ```
 
 安装其他依赖
